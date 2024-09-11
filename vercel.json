@@ -4,17 +4,16 @@
       {
         "src": "app.js",
         "use": "@vercel/node"
-      },
-      {
-        "src": "db/DBConnect.js",
-        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/api/(.*)",   
+        "dest": "/app.js"
+      },
+      {
+        "src": "/(.*)",       
         "dest": "/app.js"
       }
     ]
   }
-  
